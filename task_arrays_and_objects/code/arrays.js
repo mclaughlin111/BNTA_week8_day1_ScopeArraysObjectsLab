@@ -100,10 +100,11 @@ console.log(stoppingAtDurham);
  * If we are stopping at Durham, print "Yay Durham!" to the terminal. If not print "Aww...".
  */
 stoppingAtDurham = stations.includes("Durham");
+console.log(stoppingAtDurham);
 // stoppingAtDurham = true;
 
-if (stoppingAtDurham=true){
+if (stoppingAtDurham === true){ // watch ===
     console.log("Yay Durham!")
-} else if (stoppingAtDurham=false){
+} else {
     console.log("Awww...")
 }

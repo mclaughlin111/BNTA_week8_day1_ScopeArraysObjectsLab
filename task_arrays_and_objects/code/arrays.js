@@ -9,7 +9,8 @@ stations = ["Dundee", "Edinburgh", "North Berwick", "Newcastle", "York", "Leeds"
  * The East Coast Main Line doesn't stop at Peterborough! Add London Kings Cross to the end of the array to complete the line.
  */
 
-// console.log(stations);
+stations.push("London Kings Cross");
+console.log(stations);
 
 
 
@@ -18,7 +19,8 @@ stations = ["Dundee", "Edinburgh", "North Berwick", "Newcastle", "York", "Leeds"
  * It doesn't go as far as Dundee either, so remove it from the start of the array.
  */
 
-// console.log(stations);
+stations.shift();
+console.log(stations);
 
 
 
@@ -27,9 +29,9 @@ stations = ["Dundee", "Edinburgh", "North Berwick", "Newcastle", "York", "Leeds"
  * How many stations are on the line?
  */
 
-stationCount = null;
+stationCount = stations.length;
 
-// console.log("There are " + stationCount + " stations.");
+console.log("There are " + stationCount + " stations.");
 
 
 
@@ -38,9 +40,8 @@ stationCount = null;
  * Which station is the third stop?
  */
 
-thirdStation = null;
-
-// console.log("The third station is " + thirdStation);
+thirdStation = stations.at(2);
+console.log("The third station is " + thirdStation);
 
 
 
@@ -49,7 +50,11 @@ thirdStation = null;
  * Someone put the wrong Berwick on the timetable! Update "North Berwick" to "Berwick-upon-Tweed".
  */
 
-// console.log(stations);
+foundIndex = stations.indexOf("North Berwick");
+stations[foundIndex] = "Berwick-upon-Tweed";
+// stations["Berwick-upon-Tweed", stations.findIndex(find)]
+
+console.log(stations);
 
 
 
@@ -58,7 +63,12 @@ thirdStation = null;
  * How did Leeds get on there? Better remove it.
  */
 
-// console.log(stations);
+foundIndex = stations.indexOf("Leeds");
+stations.splice(foundIndex, 1);
+
+//OR
+
+console.log(stations);
 
 
 
@@ -67,7 +77,11 @@ thirdStation = null;
  * We forgot about Darlington! Add it to the route between Newcastle and York.
  */
 
-// console.log(stations);
+
+foundIndex = (stations.indexOf("Newcastle"))+1;
+stations.splice(foundIndex,0, "Darlington"); // DOUBLE CHECK meaning of array.splice(index, howmany, item1, ....., itemX)
+
+console.log(stations)
 
 
 
@@ -76,12 +90,20 @@ thirdStation = null;
  * Is Durham one of the stops?
  */
 
-stoppingAtDurham = null;
+stoppingAtDurham = stations.includes("Durham");
 
-// console.log(stoppingAtDurham);
+console.log(stoppingAtDurham);
 
 
 /**
  * Q9.
  * If we are stopping at Durham, print "Yay Durham!" to the terminal. If not print "Aww...".
  */
+stoppingAtDurham = stations.includes("Durham");
+// stoppingAtDurham = true;
+
+if (stoppingAtDurham=true){
+    console.log("Yay Durham!")
+} else if (stoppingAtDurham=false){
+    console.log("Awww...")
+}

@@ -1,19 +1,21 @@
 // // GUESS 1 ///////////////////
-// let guess = {
-//   hair_colour: "red",
-//   eye_colour: "blue",
-//   hat: false,
-//   glasses: true,
-//   firstName: "Joseph",
-// };
+let guess = {
+  hair_colour: "red",
+  eye_colour: "blue",
+  hat: false,
+  glasses: true,
+  firstName: "Joseph",
+};
 
 // const guessWho = function () {
 //   return `Guess who is ${guess.firstName}`;
+  
 // };
+
 
 // const finalAnswer = guessWho();
 // console.log(finalAnswer);
-// // Prediction: 
+// // Prediction: Will return Joseph
 
 // // GUESS 2 ///////////////////
 
@@ -23,13 +25,19 @@ const guessWho = function () {
   const glasses = false;
   let firstName = "Liz";
   return `Guess Who is ${firstName}.`;
+ 
 };
+// // Prediction: liz
+
+console.log(guess.firstName);
 
 const guess1 = guessWho();
 console.log("guess1: ", guess1);
+//red, blue, false, true, donna
+// because this method is calling guess1
 
 const guess2 = `Guess Who is ${firstName}`;
-console.log("guess2: ", guess2);
+// console.log("guess2: ", guess2);
 
 // // GUESS 3 ///////////////////
 
